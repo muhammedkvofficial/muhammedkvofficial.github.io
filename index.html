@@ -201,6 +201,33 @@
   .shop-card .ph{height:56px;border-radius:7px;background:color-mix(in srgb,var(--accent) 12%,var(--paper))}
   .shop-card .ln1{height:7px;width:75%;border-radius:4px;background:var(--line-strong);margin:9px 0 5px}
   .shop-card .ln2{height:7px;width:45%;border-radius:4px;background:var(--line)}
+  /* Zedu Toys landing recreation (a website screenshot — stays light in both themes) */
+  .zt{background:#fff;color:#2a2a3a;font-family:var(--body);border-radius:0 0 13px 13px}
+  .zt-nav{display:flex;align-items:center;gap:10px;padding:9px 13px;border-bottom:1px solid #eef1f6}
+  .zt-logo{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-.02em;background:linear-gradient(90deg,#2aa8f2,#ff4d6d,#3cbf5a);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .zt-menu{display:flex;align-items:center;gap:9px;font-size:10.5px;color:#6b7280}
+  .zt-menu b{color:#ff4d6d;background:#ffe3ea;padding:3px 9px;border-radius:999px;font-weight:700}
+  .zt-search{margin-left:auto;font-size:9.5px;color:#9aa1ad;background:#f3f5f9;border-radius:999px;padding:5px 12px}
+  .zt-ic{font-size:12px}
+  .zt-hero{margin:12px;background:linear-gradient(180deg,#e9f6ff,#f5fbff);border:1px solid #dceffb;border-radius:14px;padding:14px;display:grid;grid-template-columns:1.05fr .95fr;gap:12px;align-items:center}
+  .zt-h1{font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-.02em}
+  .zt-h1 .b{color:#2aa8f2}.zt-h1 .r{color:#ff4d6d}.zt-h1 .g{color:#3cbf5a}
+  .zt-desc{font-size:9px;line-height:1.55;color:#5b6472;margin:7px 0 10px}
+  .zt-oval{background:#d3ecfd;border-radius:70px/46px;padding:13px 16px;text-align:center}
+  .zt-oval-t{font-family:var(--display);font-weight:800;color:#e8506e;font-size:14px;line-height:1.18}
+  .zt-oval-s{font-size:8px;color:#2bb3c0;font-weight:700;margin:5px 0 9px}
+  .zt-btn{display:inline-block;background:#f5476b;color:#fff;font-size:9px;font-weight:700;padding:7px 13px;border-radius:999px}
+  .zt-photo{position:relative;border-radius:12px;overflow:hidden;min-height:150px;display:grid;place-items:center;background:linear-gradient(160deg,#dcecd3 0%,#efe3c6 55%,#e6d3b4 100%)}
+  .zt-photo .kid{font-size:46px;filter:drop-shadow(0 5px 7px rgba(0,0,0,.18))}
+  .zt-box{position:absolute;right:10px;bottom:10px;width:48px;height:48px;border-radius:9px;background:#25235e;color:#fff;font-size:6.5px;font-weight:800;letter-spacing:.02em;display:grid;place-items:center;box-shadow:0 6px 14px rgba(0,0,0,.28)}
+  .zt-strip{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:2px 14px 0}
+  .zt-strip span{width:17px;height:17px;border-radius:5px}
+  .zt-levels{display:flex;gap:8px;justify-content:center;padding:11px 14px 0}
+  .zt-levels .lv{font-family:var(--display);font-weight:800;font-size:12px;padding:9px 15px;border-radius:13px;color:#fff}
+  .zt-levels .lv.y{background:linear-gradient(135deg,#ffd35c,#ffb020);color:#7a4b00}
+  .zt-levels .lv.b{background:linear-gradient(135deg,#7cc6ff,#2aa8f2)}
+  .zt-levels .lv.p{background:linear-gradient(135deg,#ffa6d5,#ff5fa2)}
+  .zt-shopnow{display:block;width:max-content;margin:12px auto 14px;background:#f5476b;color:#fff;font-size:9.5px;font-weight:800;padding:7px 16px;border-radius:999px}
   @media(max-width:820px){.work{grid-template-columns:1fr}.browser{order:-1}}
 
   /* ---------- expertise ---------- */
@@ -375,13 +402,35 @@
       <a class="browser" href="https://www.zedutoys.com" target="_blank" rel="noopener" aria-label="Open the Zedu Toys website in a new tab">
         <div class="frame" role="img" aria-label="Preview of the Zedu Toys e-commerce website">
           <div class="bar"><i></i><i></i><i></i><span class="url">www.zedutoys.com</span></div>
-          <div class="shop">
-            <div class="shop-hero"><b>Play. Learn. Grow.</b></div>
-            <div class="shop-grid">
-              <div class="shop-card"><div class="ph"></div><div class="ln1"></div><div class="ln2"></div></div>
-              <div class="shop-card"><div class="ph"></div><div class="ln1"></div><div class="ln2"></div></div>
-              <div class="shop-card"><div class="ph"></div><div class="ln1"></div><div class="ln2"></div></div>
+          <div class="zt">
+            <div class="zt-nav">
+              <span class="zt-logo">zedutoys</span>
+              <span class="zt-menu"><b>Home</b> Shop Categories ▾</span>
+              <span class="zt-search">🔍 Search toys…</span>
+              <span class="zt-ic">🛒</span><span class="zt-ic">👤</span>
             </div>
+            <div class="zt-hero">
+              <div>
+                <div class="zt-h1"><span class="b">Fun</span> · <span class="r">Learning</span> · <span class="g">Creativity</span></div>
+                <p class="zt-desc">Discover a wide range of kids learning toys, brain games, puzzles and creative play items designed to boost creativity, thinking skills and early development.</p>
+                <div class="zt-oval">
+                  <div class="zt-oval-t">Smart Toys<br>Strong Minds<br>Bright Futures</div>
+                  <div class="zt-oval-s">Educational toys designed to develop your child's brain while having fun.</div>
+                  <span class="zt-btn">Explore Our Collection</span>
+                </div>
+              </div>
+              <div class="zt-photo">
+                <span class="kid">🧒</span>
+                <span class="zt-box">zedutoys</span>
+              </div>
+            </div>
+            <div class="zt-strip">
+              <span style="background:#1f2937"></span><span style="background:#e63946"></span><span style="background:#f4a300"></span><span style="background:#2aa8f2"></span><span style="background:#3cbf5a"></span><span style="background:#ff4d6d"></span><span style="background:#8a5cf6"></span><span style="background:#f4a300"></span><span style="background:#2bb3c0"></span><span style="background:#e63946"></span><span style="background:#2aa8f2"></span><span style="background:#3cbf5a"></span>
+            </div>
+            <div class="zt-levels">
+              <span class="lv y">2 to 5</span><span class="lv b">6 to 10</span><span class="lv p">11+</span>
+            </div>
+            <span class="zt-shopnow">Shop Now</span>
           </div>
         </div>
       </a>
