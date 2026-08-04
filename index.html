@@ -247,6 +247,29 @@
   .exp-card.mkt li::before{background:var(--signal)}
   @media(max-width:820px){.exp-grid{grid-template-columns:1fr}}
 
+  /* ---------- services ---------- */
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .svc{position:relative;overflow:hidden;background:var(--raise);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,3.4vw,42px);transition:.3s cubic-bezier(.16,1,.3,1)}
+  .svc::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+  .svc.mkt::before{background:linear-gradient(90deg,var(--signal),#FFB088)}
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+  .svc.mkt:hover{border-color:color-mix(in srgb,var(--signal) 45%,var(--line))}
+  .svc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+  .svc-ic{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;font-size:25px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent)}
+  .svc.mkt .svc-ic{background:color-mix(in srgb,var(--signal) 14%,transparent);color:var(--signal)}
+  .svc-tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .svc h3{font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,36px);letter-spacing:-.025em;margin:0 0 10px}
+  .svc>p{color:var(--ink-soft);font-size:15px;margin:0 0 22px;max-width:42ch}
+  .svc-list{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:13px}
+  .svc-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink);padding-bottom:13px;border-bottom:1px solid var(--line)}
+  .svc-list li:last-child{border-bottom:none;padding-bottom:0}
+  .svc-list li::before{content:"→";color:var(--accent);font-weight:700;flex:none}
+  .svc.mkt .svc-list li::before{color:var(--signal)}
+  .svc-cta{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--accent);transition:gap .24s}
+  .svc.mkt .svc-cta{color:var(--signal)}
+  .svc-cta:hover{gap:13px}
+  @media(max-width:820px){.svc-grid{grid-template-columns:1fr}}
+
   /* ---------- credentials ---------- */
   .creds{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--raise);box-shadow:var(--shadow-sm)}
   .cred{padding:clamp(26px,3.4vw,40px);border-right:1px solid var(--line);transition:background .25s}
@@ -307,6 +330,7 @@
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#expertise">Expertise</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
     <div style="display:flex;align-items:center;gap:16px">
@@ -433,6 +457,42 @@
         <h3>Build</h3>
         <div class="sub">Sites that convert</div>
         <ul><li>E-commerce Development</li><li>ChatGPT / AI tools</li><li>Landing Pages</li><li>Conversion UX</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">04 — Services</span><h2>How I help you grow.</h2></div>
+      <p class="lede" style="margin:0">Two things, end to end — I build the website, then bring the traffic that fills it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="svc-top"><span class="svc-ic">◈</span><span class="svc-tag">Service 01</span></div>
+        <h3>Web Development</h3>
+        <p>Fast, modern, mobile-first websites and online stores — built to turn visitors into customers.</p>
+        <ul class="svc-list">
+          <li>Business websites &amp; landing pages</li>
+          <li>E-commerce stores (like Zedu Toys)</li>
+          <li>Responsive, mobile-first design</li>
+          <li>Conversion-focused UX &amp; clean UI</li>
+          <li>SEO-ready structure &amp; fast load speed</li>
+        </ul>
+        <a href="#contact" class="svc-cta">Start a build <span>↗</span></a>
+      </div>
+      <div class="svc mkt reveal">
+        <div class="svc-top"><span class="svc-ic">◎</span><span class="svc-tag">Service 02</span></div>
+        <h3>Digital Marketing</h3>
+        <p>Campaigns and content that put your brand in front of the right people — and prove the results.</p>
+        <ul class="svc-list">
+          <li>Meta Ads (Facebook &amp; Instagram)</li>
+          <li>Google Ads &amp; search campaigns</li>
+          <li>SEO &amp; YouTube marketing</li>
+          <li>Social media handling &amp; content</li>
+          <li>Branding, creatives &amp; strategy</li>
+        </ul>
+        <a href="#contact" class="svc-cta">Grow my brand <span>↗</span></a>
       </div>
     </div>
   </section>
