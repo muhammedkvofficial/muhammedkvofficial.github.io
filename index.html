@@ -88,6 +88,11 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
   .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:800;letter-spacing:-.02em;font-size:18px}
   .brand .mono-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-size:13px;letter-spacing:.02em;box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 35%,transparent)}
+  .logo-img{height:26px;width:auto;display:block;filter:none}
+  .foot-inner .logo-img{height:22px}
+  @media (prefers-color-scheme:dark){.logo-img{filter:invert(1)}}
+  :root[data-theme="light"] .logo-img{filter:none}
+  :root[data-theme="dark"] .logo-img{filter:invert(1)}
   .nav-links{display:flex;gap:32px;align-items:center}
   .nav-links a{font-size:14px;color:var(--ink-soft);position:relative;padding:4px 0}
   .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--accent);transition:width .28s ease}
@@ -325,7 +330,7 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand"><span class="mono-badge">MKV</span>Muhammed KV</a>
+    <a href="#top" class="brand"><img class="logo-img" src="mkv-logo.png" alt="MKV — Muhammed KV logo">Muhammed KV</a>
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#work">Work</a>
@@ -541,7 +546,7 @@
 
 <footer>
   <div class="wrap foot-inner">
-    <a href="#top" class="brand"><span class="mono-badge">MKV</span>Muhammed KV</a>
+    <a href="#top" class="brand"><img class="logo-img" src="mkv-logo.png" alt="MKV — Muhammed KV logo">Muhammed KV</a>
     <small>Digital Marketer &amp; Web Designer · Calicut, India</small>
     <small>© 2026 — Built with intent.</small>
   </div>
