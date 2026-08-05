@@ -137,11 +137,8 @@
 
   /* portrait card */
   .portrait{position:relative;z-index:2;perspective:1000px}
-  .pcard{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:
-    radial-gradient(120% 80% at 20% 10%,color-mix(in srgb,var(--accent) 55%,transparent),transparent 60%),
-    radial-gradient(120% 80% at 90% 100%,color-mix(in srgb,var(--signal) 45%,transparent),transparent 55%),
-    linear-gradient(160deg,var(--raise),var(--raise-2));
-    border:1px solid var(--line);box-shadow:var(--shadow-lg);transition:transform .3s ease;transform-style:preserve-3d}
+  .pcard{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:#fff;border:1px solid var(--line-strong);box-shadow:var(--shadow-lg);transition:transform .3s ease;transform-style:preserve-3d}
+  .pcard-img{width:100%;height:100%;object-fit:cover;display:block}
   .pcard .mono{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:clamp(70px,10vw,120px);letter-spacing:-.04em;color:color-mix(in srgb,var(--ink) 92%,transparent);opacity:.14}
   .pcard .plabel{position:absolute;left:20px;bottom:20px;right:20px;background:color-mix(in srgb,var(--raise) 72%,transparent);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px}
   .pcard .plabel .av{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px}
@@ -366,14 +363,7 @@
         </div>
         <div class="portrait">
           <div class="pcard" id="pcard">
-            <span class="mono">MKV</span>
-            <div class="plabel">
-              <span class="av">MK</span>
-              <div>
-                <div class="t">Muhammed KV</div>
-                <div class="s">Calicut, India · Hello Aura</div>
-              </div>
-            </div>
+            <img class="pcard-img" src="hero-emblem.jpg" alt="Muhammed KV — personal brand logo">
           </div>
           <span class="pchip c1">✦ 6 months exp</span>
           <span class="pchip c2">◆ Results-driven</span>
