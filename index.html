@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Muhammed KV — Web Designer, Graphic Designer & Digital Marketing Specialist based in Calicut, India. I help businesses build a strong online presence.">
+
+<title>Digital Marketer &amp; Web Developer in Calicut | Muhammed KV</title>
+<meta name="description" content="Muhammed KV is a digital marketer and web developer in Calicut, Kerala. Fast, SEO-ready websites plus Meta and Google Ads built to bring measurable growth.">
+<link rel="canonical" href="https://www.muhammedkv.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="Muhammed KV">
-<meta property="og:title" content="Muhammed KV — Web Design & Digital Marketing">
-<meta property="og:description" content="Web Designer, Graphic Designer & Digital Marketing Specialist based in Calicut, India.">
+
+<meta name="theme-color" content="#F5F4EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07080C" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="mkv-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="mkv-logo.png">
+<link rel="preload" as="image" href="hero-emblem.jpg" fetchpriority="high">
+
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Calicut, Kerala, India">
+<meta name="geo.position" content="11.2588;75.7804">
+<meta name="ICBM" content="11.2588, 75.7804">
+
+<meta property="og:site_name" content="Muhammed KV">
+<meta property="og:title" content="Digital Marketer &amp; Web Developer in Calicut | Muhammed KV">
+<meta property="og:description" content="Digital marketer and web developer in Calicut, Kerala. SEO-ready websites, Meta and Google Ads, branding and content built to bring measurable growth.">
 <meta property="og:type" content="website">
-<title>Muhammed KV — Web Design & Digital Marketing</title>
+<meta property="og:url" content="https://www.muhammedkv.com/">
+<meta property="og:locale" content="en_IN">
+<meta property="og:image" content="https://www.muhammedkv.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Muhammed KV — Digital Marketer and Web Developer, Calicut, Kerala">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digital Marketer &amp; Web Developer in Calicut | Muhammed KV">
+<meta name="twitter:description" content="Digital marketer and web developer in Calicut, Kerala. SEO-ready websites, Meta and Google Ads, branding and content built to bring measurable growth.">
+<meta name="twitter:image" content="https://www.muhammedkv.com/og-image.jpg">
+<meta name="twitter:image:alt" content="Muhammed KV — Digital Marketer and Web Developer, Calicut, Kerala">
+
 <style>
   :root{
     --paper:#F5F4EF; --raise:#FFFFFF; --raise-2:#FBFAF6;
@@ -119,12 +148,12 @@
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.5fr .95fr;gap:clamp(30px,5vw,64px);align-items:center}
   .hero-badge{display:inline-flex;align-items:center;gap:9px;background:var(--raise);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 8px;font-size:13px;color:var(--ink-soft);box-shadow:var(--shadow-sm);margin-bottom:26px}
   .hero-badge .pip{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#fff;font-size:11px}
-  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,8.5vw,116px);line-height:.9;letter-spacing:-.04em;margin:0 0 .26em;text-wrap:balance}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,8.5vw,116px);line-height:.9;letter-spacing:-.04em;margin:0 0 18px;text-wrap:balance}
   .hero h1 .ln{display:block;overflow:hidden}
   .hero h1 .ln span{display:block;transform:translateY(110%);animation:rise 1s cubic-bezier(.16,1,.3,1) forwards}
   .hero h1 .ln:nth-child(2) span{animation-delay:.1s}
   @keyframes rise{to{transform:translateY(0)}}
-  .role{font-family:var(--serif);font-style:italic;font-size:clamp(17px,2vw,23px);color:var(--accent);margin:0 0 18px;font-weight:500}
+  .role{display:block;font-family:var(--serif);font-style:italic;font-size:clamp(17px,2vw,23px);color:var(--accent);margin:.30em 0 0;font-weight:500;letter-spacing:normal;line-height:1.3;text-wrap:balance}
   .lede{font-size:clamp(16px,1.6vw,18px);color:var(--ink-soft);max-width:48ch;margin:0 0 30px}
   .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
   .btn{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;padding:14px 24px;border-radius:12px;cursor:pointer;transition:.24s cubic-bezier(.16,1,.3,1);border:1px solid transparent;will-change:transform}
@@ -307,6 +336,24 @@
   .philo .q em{font-style:italic;color:var(--accent)}
   .philo p{max-width:52ch;margin:26px auto 0;color:var(--ink-soft);font-size:clamp(15px,1.5vw,17px)}
 
+  /* ---------- faq ---------- */
+  .faq{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--raise);box-shadow:var(--shadow-sm)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item:last-child{border-bottom:none}
+  .faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:clamp(18px,2.4vw,24px) clamp(20px,2.8vw,30px);transition:background .22s}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary:hover{background:var(--raise-2)}
+  .faq-item summary h3{font-family:var(--display);font-weight:700;font-size:clamp(15px,1.8vw,19px);letter-spacing:-.015em;line-height:1.35;margin:0}
+  .faq-mark{position:relative;width:18px;height:18px;flex:none}
+  .faq-mark::before,.faq-mark::after{content:"";position:absolute;top:50%;left:50%;translate:-50% -50%;background:var(--accent);border-radius:2px;transition:transform .28s cubic-bezier(.16,1,.3,1)}
+  .faq-mark::before{width:15px;height:2px}
+  .faq-mark::after{width:2px;height:15px}
+  .faq-item[open] .faq-mark::after{transform:scaleY(0)}
+  .faq-a{padding:0 clamp(20px,2.8vw,30px) clamp(20px,2.6vw,26px);max-width:78ch}
+  .faq-a p{margin:0;color:var(--ink-soft);font-size:15px;line-height:1.65}
+  .faq-a a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+  @media(prefers-reduced-motion:reduce){.faq-mark::before,.faq-mark::after{transition:none}}
+
   /* ---------- contact ---------- */
   .contact{position:relative;overflow:hidden;background:linear-gradient(150deg,#0E1016,#171a2b);color:#F5F4EF;border-radius:28px;padding:clamp(44px,7vw,96px) clamp(26px,5vw,76px);text-align:center;box-shadow:var(--shadow-lg)}
   .contact::before{content:"";position:absolute;inset:auto -10% -70% -10%;height:90%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 75%,transparent),transparent);filter:blur(50px);opacity:.5}
@@ -359,17 +406,263 @@
     html{scroll-behavior:auto}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.muhammedkv.com/#person",
+      "name": "Muhammed KV",
+      "url": "https://www.muhammedkv.com/",
+      "image": "https://www.muhammedkv.com/hero-emblem.jpg",
+      "jobTitle": [
+        "Digital Marketing Specialist",
+        "Web Developer",
+        "Graphic Designer"
+      ],
+      "description": "Digital marketer and web developer in Calicut, Kerala, building SEO-ready websites and running Meta and Google Ads campaigns for businesses.",
+      "email": "mailto:muhammedkvofficial@gmail.com",
+      "telephone": "+91-99956-09663",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Hello Aura"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Calicut"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Fragmtree Campus, Calicut"
+        }
+      ],
+      "knowsAbout": [
+        "Search Engine Optimization",
+        "Social Media Marketing",
+        "Search Engine Marketing",
+        "Google Ads",
+        "Meta Ads",
+        "Content Marketing",
+        "Web Development",
+        "E-commerce",
+        "Branding",
+        "Graphic Design",
+        "SEO Copywriting"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Calicut",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.instagram.com/muhammedkv0",
+        "https://muhammedkvofficial.github.io/"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.muhammedkv.com/#service",
+      "name": "Muhammed KV - Digital Marketing & Web Development",
+      "url": "https://www.muhammedkv.com/",
+      "image": "https://www.muhammedkv.com/og-image.jpg",
+      "founder": {
+        "@id": "https://www.muhammedkv.com/#person"
+      },
+      "description": "Digital marketing and web development services for businesses in Calicut, Kerala and across India - SEO, Meta Ads, Google Ads, content, branding and website development.",
+      "email": "mailto:muhammedkvofficial@gmail.com",
+      "telephone": "+91-99956-09663",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Calicut",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.2588,
+        "longitude": 75.7804
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Calicut"
+        },
+        {
+          "@type": "State",
+          "name": "Kerala"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "serviceType": [
+        "SEO",
+        "Social Media Marketing",
+        "Search Engine Marketing",
+        "Content Marketing",
+        "Web Development",
+        "SEO Copywriting"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital marketing and web development services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO",
+              "description": "Search engine optimisation - technical fixes, keyword targeting and on-page structure that lift pages in organic search."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social Media Marketing",
+              "description": "Day-to-day social media handling, platform-native content and paid social campaigns on Meta."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Search Engine Marketing",
+              "description": "Google Ads campaigns built around buying intent and tracked back to leads and sales."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Content Marketing",
+              "description": "Blogs, creatives, reels and campaign assets planned around real audience search demand."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Development",
+              "description": "Fast, mobile-first websites and e-commerce stores on clean, SEO-ready structure."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO Copywriting",
+              "description": "Website and product copy written to read well for people and rank well in search."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.muhammedkv.com/#website",
+      "url": "https://www.muhammedkv.com/",
+      "name": "Muhammed KV - Digital Marketer & Web Developer",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://www.muhammedkv.com/#person"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.muhammedkv.com/#webpage",
+      "url": "https://www.muhammedkv.com/",
+      "name": "Digital Marketer & Web Developer in Calicut | Muhammed KV",
+      "isPartOf": {
+        "@id": "https://www.muhammedkv.com/#website"
+      },
+      "about": {
+        "@id": "https://www.muhammedkv.com/#person"
+      },
+      "primaryImageOfPage": "https://www.muhammedkv.com/og-image.jpg",
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.muhammedkv.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Muhammed KV do as a digital marketer and web developer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I cover both sides of an online presence. On the development side I build fast, mobile-first websites and e-commerce stores on clean, SEO-ready structure. On the marketing side I run SEO, Meta Ads, Google Ads, social media handling and content. The site that gets built also gets found."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are you based, and do you work with clients outside Calicut?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I'm based in Calicut, Kerala, and I work with businesses across Kerala and the rest of India. Design reviews, campaign changes and reporting all happen online, so distance isn't a limitation — I work remotely as readily as locally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you handle the website and the marketing together?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and that's usually the point. A site built without search in mind is expensive to fix later, and ads pointed at a slow page waste budget. Building the site and running the campaigns together means the structure, the copy and the landing pages line up from day one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of projects have you worked on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "My featured project is Zedu Toys, an educational-toys e-commerce site where I contributed to the design and development and applied branding throughout. I'm currently at Hello Aura, working across web design, graphic design, branding and digital marketing for client businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you measure marketing results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tracking gets set up before a campaign runs — conversions, form fills, purchases, whichever action actually matters to the business. Reporting is tied to those numbers rather than reach or impressions alone, so you can see what the spend returned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's your background?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A B.Sc. in Chemistry from the University of Calicut, plus digital marketing training at Fragmtree Campus, Calicut. The science background is where the analytical half comes from — I treat campaigns as tests with measurable outcomes rather than guesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a website take to build?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope. A focused landing page is quick; an e-commerce store with a catalogue, payments and content takes longer. I'll give you a realistic timeline once we've talked through what the site actually needs to do."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand"><img class="logo-img" src="mkv-logo.png" alt="MKV — Muhammed KV logo">Muhammed KV</a>
+    <a href="#top" class="brand"><img class="logo-img" src="mkv-logo.png" width="317" height="151" decoding="async" alt="Muhammed KV logo">Muhammed KV</a>
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#expertise">Expertise</a>
       <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <div style="display:flex;align-items:center;gap:16px">
@@ -390,9 +683,9 @@
           <h1>
             <span class="ln"><span>Muhammed</span></span>
             <span class="ln"><span class="grad-txt">KV</span></span>
+            <span class="role">Digital Marketer &amp; Web Developer in Calicut, Kerala</span>
           </h1>
-          <p class="role">Web Designer · Graphic Designer · Digital Marketing Specialist</p>
-          <p class="lede">I help businesses build a strong online presence — through modern websites, sharp visual identity, and marketing that's built to be measured.</p>
+          <p class="lede">I help businesses build a strong online presence — SEO-ready websites, sharp visual identity, and Meta &amp; Google Ads campaigns that are built to be measured.</p>
           <div class="cta-row">
             <a href="#contact" class="btn primary">Start a project <span class="arw">↗</span></a>
             <a href="#work" class="btn ghost">View my work</a>
@@ -400,7 +693,7 @@
         </div>
         <div class="portrait">
           <div class="pcard" id="pcard">
-            <img class="pcard-img" src="hero-emblem.jpg" alt="Muhammed KV — personal brand logo">
+            <img class="pcard-img" src="hero-emblem.jpg" width="579" height="714" fetchpriority="high" decoding="async" alt="Muhammed KV — digital marketer and web developer based in Calicut, Kerala">
           </div>
           <span class="pchip c1">✦ 6 months exp</span>
           <span class="pchip c2">◆ Results-driven</span>
@@ -459,7 +752,7 @@
       <a class="browser" href="https://www.zedutoys.com" target="_blank" rel="noopener" aria-label="Open the Zedu Toys website in a new tab">
         <div class="frame" role="img" aria-label="Preview of the Zedu Toys e-commerce website">
           <div class="bar"><i></i><i></i><i></i><span class="url">www.zedutoys.com</span></div>
-          <img class="zt-shot" src="zedutoys-home.jpg" alt="Zedu Toys homepage — designed and developed by Muhammed KV" loading="lazy">
+          <img class="zt-shot" src="zedutoys-home.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="Zedu Toys e-commerce homepage — educational toys store designed and developed by Muhammed KV">
         </div>
       </a>
     </div>
@@ -604,6 +897,44 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">05 — FAQ</span><h2>Questions I get asked.</h2></div>
+      <p class="lede" style="margin:0">The practical stuff — what I do, where I work, and how the results get measured.</p>
+    </div>
+    <div class="faq reveal">
+      <details class="faq-item" open>
+        <summary><h3>What does Muhammed KV do as a digital marketer and web developer?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>I cover both sides of an online presence. On the development side I build fast, mobile-first websites and e-commerce stores on clean, SEO-ready structure. On the marketing side I run SEO, Meta Ads, Google Ads, social media handling and content. The site that gets built also gets found.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Where are you based, and do you work with clients outside Calicut?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>I'm based in Calicut, Kerala, and I work with businesses across Kerala and the rest of India. Design reviews, campaign changes and reporting all happen online, so distance isn't a limitation — I work remotely as readily as locally.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><h3>Do you handle the website and the marketing together?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Yes, and that's usually the point. A site built without search in mind is expensive to fix later, and ads pointed at a slow page waste budget. Building the site and running the campaigns together means the structure, the copy and the landing pages line up from day one.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><h3>What kind of projects have you worked on?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>My featured project is <a href="https://www.zedutoys.com" target="_blank" rel="noopener">Zedu Toys</a>, an educational-toys e-commerce site where I contributed to the design and development and applied branding throughout. I'm currently at Hello Aura, working across web design, graphic design, branding and digital marketing for client businesses.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><h3>How do you measure marketing results?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>Tracking gets set up before a campaign runs — conversions, form fills, purchases, whichever action actually matters to the business. Reporting is tied to those numbers rather than reach or impressions alone, so you can see what the spend returned.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><h3>What's your background?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>A B.Sc. in Chemistry from the University of Calicut, plus digital marketing training at Fragmtree Campus, Calicut. The science background is where the analytical half comes from — I treat campaigns as tests with measurable outcomes rather than guesses.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary><h3>How long does a website take to build?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
+        <div class="faq-a"><p>It depends on scope. A focused landing page is quick; an e-commerce store with a catalogue, payments and content takes longer. I'll give you a realistic timeline once we've talked through what the site actually needs to do.</p></div>
+      </details>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="wrap">
     <div class="contact reveal">
@@ -630,7 +961,7 @@
 
 <footer>
   <div class="wrap foot-inner">
-    <a href="#top" class="brand"><img class="logo-img" src="mkv-logo.png" alt="MKV — Muhammed KV logo">Muhammed KV</a>
+    <a href="#top" class="brand"><img class="logo-img" src="mkv-logo.png" width="317" height="151" decoding="async" alt="Muhammed KV logo">Muhammed KV</a>
     <small>Digital Marketer &amp; Web Designer · Calicut, India</small>
     <small>© 2026 — Built with intent.</small>
   </div>
