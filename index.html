@@ -197,6 +197,9 @@
   @media(max-width:840px){.about{grid-template-columns:1fr}}
 
   /* ---------- selected work ---------- */
+  .work-list{display:grid;gap:clamp(16px,2.4vw,26px)}
+  .work-card.alt{grid-template-columns:1.15fr 1fr}
+  .work-card.alt .work-meta{order:2}
   .work-card{position:relative;overflow:hidden;background:var(--card);color:var(--card-ink);border-radius:26px;
     display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(24px,4vw,56px);align-items:center;
     padding:clamp(26px,4vw,56px);transition:transform .45s var(--ease),box-shadow .45s}
@@ -210,7 +213,7 @@
   .work-link:hover{gap:14px}
   .work-shot{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .6s var(--ease)}
   .work-card:hover .work-shot{transform:scale(1.025)}
-  @media(max-width:880px){.work-card{grid-template-columns:1fr}}
+  @media(max-width:880px){.work-card,.work-card.alt{grid-template-columns:1fr}.work-card.alt .work-meta{order:0}}
 
   /* ---------- services (flip tiles) ---------- */
   .dm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -351,7 +354,9 @@
         "E-commerce",
         "Branding",
         "Graphic Design",
-        "SEO Copywriting"
+        "SEO Copywriting",
+        "Instagram Marketing",
+        "Social Media Management"
       ],
       "address": {
         "@type": "PostalAddress",
@@ -521,7 +526,7 @@
           "name": "What kind of projects have you worked on?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "My featured project is Zedu Toys, an educational-toys e-commerce site where I contributed to the design and development and applied branding throughout. I'm currently at Hello Aura, working across web design, graphic design, branding and digital marketing for client businesses."
+            "text": "Two stand out. Zedu Toys is an educational-toys e-commerce site where I contributed to the design and development and applied branding throughout. Royal Trading Academy is a UAE forex institute whose Instagram posts I design and whose page I handle day to day. I'm currently at Hello Aura, working across web design, graphic design, branding and digital marketing for client businesses."
           }
         },
         {
@@ -561,7 +566,7 @@
     <span class="status"><span class="dot"></span><span>Available for new projects</span></span>
     <nav class="nav-links">
       <a href="#about">About <sup>(01)</sup></a>
-      <a href="#work">Work <sup>(01)</sup></a>
+      <a href="#work">Work <sup>(02)</sup></a>
       <a href="#services">Services <sup>(06)</sup></a>
       <a href="#experience">Experience <sup>(03)</sup></a>
       <a href="#faq">FAQ <sup>(07)</sup></a>
@@ -643,9 +648,10 @@
   <section id="work" class="wrap">
     <div class="sec-head reveal">
       <div><span class="idx">02 — Selected work</span><h2>Work worth showing.</h2></div>
-      <p class="lede">A clean, playful shopping experience — branding applied end to end.</p>
+      <p class="lede">An e-commerce build and a social brand system — two sides of the same job, done end to end.</p>
     </div>
-    <article class="work-card reveal">
+    <div class="work-list">
+      <article class="work-card reveal">
       <div class="work-meta">
         <span class="k">E-commerce · Branding · Web</span>
         <h3>Zedu Toys</h3>
@@ -656,7 +662,21 @@
       <div class="work-shot">
         <img src="zedutoys-home.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="Zedu Toys e-commerce homepage — educational toys store designed and developed by Muhammed KV">
       </div>
-    </article>
+      </article>
+
+      <article class="work-card alt reveal">
+        <div class="work-meta">
+          <span class="k">Social Media · Graphic Design · Branding</span>
+          <h3>Royal Trading Academy</h3>
+          <p>I design the Instagram content for this UAE forex trading institute and handle the page day to day — a consistent post system covering campaign creatives, the Trader of the Week series and Malayalam-language posts, built on one visual identity across a 23.5K-follower audience.</p>
+          <ul class="tags"><li>Post Design</li><li>Social Media</li><li>Branding</li><li>Content</li></ul>
+          <a class="work-link" href="https://www.instagram.com/royalacademy_ae/" target="_blank" rel="noopener">View the page <span>↗</span></a>
+        </div>
+        <div class="work-shot">
+          <img src="royal-academy-grid.jpg" width="1200" height="798" loading="lazy" decoding="async" alt="Instagram post designs for Royal Trading Academy — forex education graphics designed by Muhammed KV">
+        </div>
+      </article>
+    </div>
   </section>
 
   <!-- SERVICES -->
@@ -796,7 +816,7 @@
       </details>
       <details class="faq-item">
         <summary><h3>What kind of projects have you worked on?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
-        <div class="faq-a"><p>My featured project is <a href="https://www.zedutoys.com" target="_blank" rel="noopener">Zedu Toys</a>, an educational-toys e-commerce site where I contributed to the design and development and applied branding throughout. I'm currently at Hello Aura, working across web design, graphic design, branding and digital marketing for client businesses.</p></div>
+        <div class="faq-a"><p>Two stand out. <a href="https://www.zedutoys.com" target="_blank" rel="noopener">Zedu Toys</a> is an educational-toys e-commerce site where I contributed to the design and development and applied branding throughout. <a href="https://www.instagram.com/royalacademy_ae/" target="_blank" rel="noopener">Royal Trading Academy</a> is a UAE forex institute whose Instagram posts I design and whose page I handle day to day. I'm currently at Hello Aura, working across web design, graphic design, branding and digital marketing for client businesses.</p></div>
       </details>
       <details class="faq-item">
         <summary><h3>How do you measure marketing results?</h3><span class="faq-mark" aria-hidden="true"></span></summary>
