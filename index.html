@@ -272,21 +272,24 @@
   @media(max-width:900px){.dm-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.dm-grid{grid-template-columns:1fr}}
   /* touch: nothing to flip on, so lay both sides out in flow */
-  /* Touch has no hover, but iOS keeps a synthesised :hover on whatever was last
-     tapped. These overrides therefore have to name :hover/:focus/:active too, or
-     the flip rules above still win on specificity and the tapped card renders
-     mirrored. */
+  /* Touch keeps the flip but takes it from a real tap. iOS leaves a synthesised
+     :hover on whatever was last tapped, so every hover selector is neutralised
+     here and only .is-flipped turns a card over. */
   @media(hover:none){
-    .dm{min-height:0;perspective:none;border:1px solid var(--line);border-radius:20px;background:var(--raise);padding:clamp(20px,2.6vw,28px)}
-    .dm-inner,.dm:hover .dm-inner,.dm:focus-visible .dm-inner,.dm:active .dm-inner{position:static;transform:none}
-    .dm-grid .dm,.dm-grid .dm:hover,.dm-grid .dm:focus-visible,.dm-grid .dm:active{transform:none}
-    .dm-face,.dm-back,
-    .dm:hover .dm-face,.dm:hover .dm-back,
-    .dm:focus-visible .dm-face,.dm:focus-visible .dm-back,
-    .dm:active .dm-face,.dm:active .dm-back{position:static;inset:auto;transform:none;opacity:1;padding:0;border:none;background:none;box-shadow:none;-webkit-backface-visibility:visible;backface-visibility:visible}
-    .dm-face{display:flex;align-items:center;justify-content:flex-start;text-align:left;gap:13px;margin-bottom:13px}
-    .dm-back p{color:var(--ink-soft)}
-    .dm-title{display:none}
+    .dm{cursor:pointer;-webkit-tap-highlight-color:transparent;min-height:clamp(214px,48vw,244px)}
+    .dm:hover .dm-inner,.dm:focus-visible .dm-inner,.dm:active .dm-inner{transform:none}
+    .dm-grid .dm:hover,.dm-grid .dm:focus-visible,.dm-grid .dm:active{transform:none}
+    .dm:hover .dm-back,.dm:focus-visible .dm-back{box-shadow:none}
+    .dm.is-flipped .dm-inner{transform:rotateY(180deg)}
+    .dm.is-flipped .dm-back{box-shadow:var(--shadow)}
+  }
+  /* reduced motion on touch: cross-fade instead of rotating */
+  @media(prefers-reduced-motion:reduce) and (hover:none){
+    .dm-inner,.dm.is-flipped .dm-inner{transform:none;transition:none}
+    .dm-face,.dm-back{-webkit-backface-visibility:visible;backface-visibility:visible;transition:opacity .18s linear}
+    .dm-back{transform:none;opacity:0}
+    .dm.is-flipped .dm-face{opacity:0}
+    .dm.is-flipped .dm-back{opacity:1}
   }
   @media(prefers-reduced-motion:reduce) and (hover:hover){
     .dm-inner,.dm:hover .dm-inner,.dm:focus-visible .dm-inner{transform:none;transition:none}
@@ -1024,6 +1027,26 @@
     var bar=document.createElement('div');bar.className='progress';document.body.appendChild(bar);
     var upd=function(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';};
     upd();addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
+  })();
+
+  // services: tap to flip where there is no hover to do it
+  (function(){
+    if(!matchMedia('(hover:none)').matches)return;
+    var cards=[].slice.call(document.querySelectorAll('.dm'));
+    cards.forEach(function(c){
+      c.setAttribute('role','button');
+      c.setAttribute('aria-expanded','false');
+      var toggle=function(e){
+        e.preventDefault();
+        var open=!c.classList.contains('is-flipped');
+        cards.forEach(function(o){o.classList.remove('is-flipped');o.setAttribute('aria-expanded','false');});
+        if(open){c.classList.add('is-flipped');c.setAttribute('aria-expanded','true');}
+      };
+      c.addEventListener('click',toggle);
+      c.addEventListener('keydown',function(e){
+        if(e.key==='Enter'||e.key===' '||e.key==='Spacebar')toggle(e);
+      });
+    });
   })();
 
   // hero: emblem drifts toward the pointer
