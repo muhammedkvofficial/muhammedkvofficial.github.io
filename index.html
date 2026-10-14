@@ -216,22 +216,23 @@
   @media(max-width:880px){.work-card,.work-card.alt{grid-template-columns:1fr}.work-card.alt .work-meta{order:0}}
 
   /* ---------- storefront grid ---------- */
-  .sec-sub{margin:clamp(46px,6vw,84px) 0 clamp(24px,3vw,34px);padding-top:clamp(30px,4vw,44px);border-top:1px solid var(--line)}
+  .sec-sub{margin:clamp(40px,5vw,68px) 0 clamp(20px,2.4vw,28px);padding-top:clamp(26px,3.4vw,38px);border-top:1px solid var(--line)}
   .sec-sub h3{font-family:var(--display);font-weight:800;font-size:clamp(23px,3.3vw,38px);letter-spacing:-.032em;line-height:1.06;margin:13px 0 10px}
   .sec-sub p{margin:0;color:var(--muted);font-size:clamp(15px,1.5vw,17px);max-width:54ch}
-  .shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,1.8vw,22px)}
-  .shop{display:block;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--raise);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+  .shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.3vw,15px)}
+  .shop{display:block;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--raise);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
   .shop:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--clay) 45%,var(--line));box-shadow:var(--shadow)}
   .shop-img{aspect-ratio:16/10;overflow:hidden;background:var(--raise-2)}
   .shop-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
   .shop:hover .shop-img img{transform:scale(1.04)}
-  .shop-body{padding:clamp(15px,1.8vw,20px)}
-  .shop-body h4{font-family:var(--display);font-weight:700;font-size:clamp(16px,1.8vw,19px);letter-spacing:-.02em;margin:0 0 5px;line-height:1.2}
-  .shop-body p{margin:0;color:var(--muted);font-size:13.5px}
-  .shop-go{display:inline-flex;align-items:center;gap:7px;margin-top:13px;font-size:13px;font-weight:600;color:var(--clay);transition:gap .24s}
+  .shop-body{padding:clamp(11px,1.3vw,15px)}
+  .shop-body h4{font-family:var(--display);font-weight:700;font-size:clamp(14px,1.35vw,16px);letter-spacing:-.02em;margin:0 0 4px;line-height:1.2}
+  .shop-body p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.45}
+  .shop-go{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;font-weight:600;color:var(--clay);transition:gap .24s}
   .shop:hover .shop-go{gap:12px}
-  @media(max-width:900px){.shop-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:560px){.shop-grid{grid-template-columns:1fr}}
+  @media(max-width:1040px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:760px){.shop-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:430px){.shop-grid{grid-template-columns:1fr}}
 
   /* ---------- services (flip tiles) ---------- */
   .dm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -716,7 +717,7 @@
     </div>
     <div class="shop-grid">
       <a class="shop reveal" href="https://www.desertessencecosmetics.com/" target="_blank" rel="noopener">
-        <div class="shop-img"><img src="shop-desert-essence.jpg" width="960" height="600" loading="lazy" decoding="async" alt="Desert Essence storefront banner — UI, banner and product design by Muhammed KV"></div>
+        <div class="shop-img"><img src="shop-desert-essence.jpg" width="720" height="450" loading="lazy" decoding="async" alt="Desert Essence storefront banner — UI, banner and product design by Muhammed KV"></div>
         <div class="shop-body">
           <h4>Desert Essence</h4>
           <p>Fragrance &amp; cosmetics, UAE</p>
@@ -724,7 +725,7 @@
         </div>
       </a>
       <a class="shop reveal" href="https://zenksa.com/" target="_blank" rel="noopener">
-        <div class="shop-img"><img src="shop-zen.jpg" width="960" height="600" loading="lazy" decoding="async" alt="ZEN storefront banner — UI, banner and product design by Muhammed KV"></div>
+        <div class="shop-img"><img src="shop-zen.jpg" width="720" height="450" loading="lazy" decoding="async" alt="ZEN storefront banner — UI, banner and product design by Muhammed KV"></div>
         <div class="shop-body">
           <h4>ZEN</h4>
           <p>Home decor &amp; electronics, Saudi Arabia</p>
@@ -732,7 +733,7 @@
         </div>
       </a>
       <a class="shop reveal" href="https://jokerperfumes.com/" target="_blank" rel="noopener">
-        <div class="shop-img"><img src="shop-joker-perfumes.jpg" width="960" height="600" loading="lazy" decoding="async" alt="Joker Perfumes storefront banner — UI, banner and product design by Muhammed KV"></div>
+        <div class="shop-img"><img src="shop-joker-perfumes.jpg" width="720" height="450" loading="lazy" decoding="async" alt="Joker Perfumes storefront banner — UI, banner and product design by Muhammed KV"></div>
         <div class="shop-body">
           <h4>Joker Perfumes</h4>
           <p>Luxury fragrance</p>
@@ -740,7 +741,7 @@
         </div>
       </a>
       <a class="shop reveal" href="https://www.doctorinlife.com/" target="_blank" rel="noopener">
-        <div class="shop-img"><img src="shop-dr-in.jpg" width="960" height="600" loading="lazy" decoding="async" alt="DR.IN storefront banner — UI, banner and product design by Muhammed KV"></div>
+        <div class="shop-img"><img src="shop-dr-in.jpg" width="720" height="450" loading="lazy" decoding="async" alt="DR.IN storefront banner — UI, banner and product design by Muhammed KV"></div>
         <div class="shop-body">
           <h4>DR.IN</h4>
           <p>Effervescent wellness supplements</p>
@@ -748,7 +749,7 @@
         </div>
       </a>
       <a class="shop reveal" href="https://mycole.in/" target="_blank" rel="noopener">
-        <div class="shop-img"><img src="shop-cole.jpg" width="960" height="600" loading="lazy" decoding="async" alt="COLE storefront banner — UI, banner and product design by Muhammed KV"></div>
+        <div class="shop-img"><img src="shop-cole.jpg" width="720" height="450" loading="lazy" decoding="async" alt="COLE storefront banner — UI, banner and product design by Muhammed KV"></div>
         <div class="shop-body">
           <h4>COLE</h4>
           <p>Perfumery institute</p>
@@ -756,7 +757,7 @@
         </div>
       </a>
       <a class="shop reveal" href="https://elegantbayt.com/" target="_blank" rel="noopener">
-        <div class="shop-img"><img src="shop-elegant-bayt.jpg" width="960" height="600" loading="lazy" decoding="async" alt="Elegant Bayt storefront banner — UI, banner and product design by Muhammed KV"></div>
+        <div class="shop-img"><img src="shop-elegant-bayt.jpg" width="720" height="450" loading="lazy" decoding="async" alt="Elegant Bayt storefront banner — UI, banner and product design by Muhammed KV"></div>
         <div class="shop-body">
           <h4>Elegant Bayt</h4>
           <p>Home essentials</p>
@@ -764,7 +765,7 @@
         </div>
       </a>
       <a class="shop reveal" href="https://sterlingshopy.com/" target="_blank" rel="noopener">
-        <div class="shop-img"><img src="shop-sterling.jpg" width="960" height="600" loading="lazy" decoding="async" alt="Sterling storefront banner — UI, banner and product design by Muhammed KV"></div>
+        <div class="shop-img"><img src="shop-sterling.jpg" width="720" height="450" loading="lazy" decoding="async" alt="Sterling storefront banner — UI, banner and product design by Muhammed KV"></div>
         <div class="shop-body">
           <h4>Sterling</h4>
           <p>Beauty &amp; personal care</p>
