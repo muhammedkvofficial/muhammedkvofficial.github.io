@@ -220,19 +220,25 @@
   .sec-sub h3{font-family:var(--display);font-weight:800;font-size:clamp(23px,3.3vw,38px);letter-spacing:-.032em;line-height:1.06;margin:13px 0 10px}
   .sec-sub p{margin:0;color:var(--muted);font-size:clamp(15px,1.5vw,17px);max-width:54ch}
   .shop-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.3vw,15px)}
-  .shop{display:block;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--raise);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+  .shop{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--raise);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
   .shop:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--clay) 45%,var(--line));box-shadow:var(--shadow)}
   .shop-img{aspect-ratio:16/10;overflow:hidden;background:var(--raise-2)}
   .shop-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
   .shop:hover .shop-img img{transform:scale(1.04)}
-  .shop-body{padding:clamp(11px,1.3vw,15px)}
+  .shop-body{padding:clamp(11px,1.3vw,15px);flex:1;display:flex;flex-direction:column}
   .shop-body h4{font-family:var(--display);font-weight:700;font-size:clamp(14px,1.35vw,16px);letter-spacing:-.02em;margin:0 0 4px;line-height:1.2}
   .shop-body p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.45}
-  .shop-go{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;font-weight:600;color:var(--clay);transition:gap .24s}
+  .shop-go{display:inline-flex;align-items:center;align-self:flex-start;gap:6px;margin-top:auto;padding-top:10px;font-size:12px;font-weight:600;color:var(--clay);transition:gap .24s}
   .shop:hover .shop-go{gap:12px}
   @media(max-width:1040px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
-  @media(max-width:760px){.shop-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:430px){.shop-grid{grid-template-columns:1fr}}
+  /* stays 3 across on phones, so the tile body condenses to banner + name */
+  @media(max-width:560px){
+    .shop-grid{gap:8px}
+    .shop{border-radius:11px}
+    .shop-body{padding:9px 9px 11px}
+    .shop-body h4{font-size:12px;letter-spacing:-.015em;line-height:1.25;margin:0}
+    .shop-body p,.shop-go{display:none}
+  }
 
   /* ---------- services (flip tiles) ---------- */
   .dm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
