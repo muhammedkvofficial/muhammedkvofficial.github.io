@@ -124,6 +124,29 @@
   @media(max-width:940px){.nav-links{display:none}}
   @media(max-width:560px){.status{font-size:11px;gap:6px}.nav-inner{padding:7px 7px 7px 13px;gap:8px}.nav-cta{padding:9px 14px;font-size:13px}.theme-btn{width:32px;height:32px}}
 
+  /* ---------- bottom nav (small screens only) ---------- */
+  .botnav{display:none}
+  @media(max-width:940px){
+    .botnav{position:fixed;left:0;right:0;bottom:0;z-index:105;display:grid;grid-template-columns:repeat(5,1fr);
+      gap:2px;padding:7px 6px calc(7px + env(safe-area-inset-bottom));
+      background:color-mix(in srgb,var(--paper) 86%,transparent);
+      backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+      border-top:1px solid var(--line)}
+    .botnav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+      min-height:46px;padding:5px 2px;border-radius:12px;font-size:10px;font-weight:500;line-height:1;
+      color:var(--muted);-webkit-tap-highlight-color:transparent;
+      transition:color .22s var(--ease),background .22s var(--ease)}
+    .botnav svg{width:19px;height:19px;flex:none;transition:transform .28s var(--ease)}
+    .botnav a:active{background:var(--raise-2)}
+    .botnav a.active{color:var(--ink);background:var(--raise-2)}
+    .botnav a.active svg{color:var(--clay)}
+    @media(prefers-reduced-motion:no-preference){.botnav a.active svg{transform:translateY(-1px) scale(1.06)}}
+    /* keep the footer clear of the bar */
+    body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+    /* anchor targets clear the top pill */
+    section[id]{scroll-margin-top:84px}
+  }
+
   /* ---------- hero ---------- */
   .hero{position:relative;padding:clamp(130px,17vw,190px) 0 clamp(50px,7vw,84px)}
   .hero-stage{position:relative;padding-bottom:clamp(0px,1.6vw,22px)}
@@ -364,6 +387,33 @@
   .foot nav{display:flex;gap:16px;flex-wrap:wrap}
   .foot nav a{font-size:14px;color:var(--muted);transition:color .2s}
   .foot nav a:hover{color:var(--ink)}
+
+  /* ---------- small-screen rhythm ----------
+     The page runs long on a phone, so the vertical scaffolding tightens:
+     less air between sections, smaller section heads, denser work cards. */
+  @media(max-width:620px){
+    section{padding:46px 0}
+    .sec-head{margin-bottom:26px;gap:12px}
+    .sec-head h2{font-size:30px}
+    .sec-sub{margin:34px 0 20px;padding-top:26px}
+    .sec-sub h3{font-size:24px;margin:11px 0 8px}
+    .hero{padding:112px 0 36px}
+    .hero-foot{margin-top:28px;padding-top:20px;gap:22px}
+    .hero-blurb p{margin-bottom:18px}
+    .work-card{gap:18px;padding:20px;border-radius:20px}
+    .work-meta h3{font-size:28px;margin:12px 0 10px}
+    .work-meta p{margin-bottom:16px}
+    .tags{margin-bottom:18px;gap:6px}
+    .tags li{padding:5px 11px;font-size:12px}
+    .work-list{gap:12px}
+    .about{gap:26px}
+    .about p{margin-bottom:15px;font-size:16px}
+    .exp-row{padding:18px 0}
+    .dm-note{margin-top:20px}
+    .contact{padding-block:56px}
+    .marquee{padding:13px 0}
+    .foot{padding:24px 0 30px}
+  }
 
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
@@ -641,6 +691,14 @@
     </span>
   </div>
 </header>
+
+<nav class="botnav" aria-label="Sections">
+  <a href="#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></svg><span>About</span></a>
+  <a href="#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3.2" y="4.2" width="7" height="7" rx="1.8"/><rect x="13.8" y="4.2" width="7" height="7" rx="1.8"/><rect x="3.2" y="12.8" width="7" height="7" rx="1.8"/><rect x="13.8" y="12.8" width="7" height="7" rx="1.8"/></svg><span>Work</span></a>
+  <a href="#services"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3.2 14.3 9l5.8 2.3-5.8 2.3L12 19.4 9.7 13.6 3.9 11.3 9.7 9Z"/></svg><span>Services</span></a>
+  <a href="#faq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.8"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.3 2.4c-.6.2-.9.8-.9 1.4v.5"/><circle cx="12" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg><span>FAQ</span></a>
+  <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.8 10.9 13.4"/><path d="M20.5 3.8 14.4 20.6l-3.5-7.2-7.2-3.5Z"/></svg><span>Contact</span></a>
+</nav>
 
 <main id="top">
 
@@ -1075,6 +1133,39 @@
     var bar=document.createElement('div');bar.className='progress';document.body.appendChild(bar);
     var upd=function(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';};
     upd();addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
+  })();
+
+  // bottom nav: mark the section currently in view
+  (function(){
+    var nav=document.querySelector('.botnav');
+    if(!nav)return;
+    var links=[].slice.call(nav.querySelectorAll('a'));
+    var pairs=[];
+    links.forEach(function(a){
+      var el=document.getElementById(a.getAttribute('href').slice(1));
+      if(el)pairs.push({a:a,el:el});
+    });
+    if(!pairs.length)return;
+    var cur=null;
+    function upd(){
+      var line=innerHeight*0.34,found=null;
+      pairs.forEach(function(p){ if(p.el.getBoundingClientRect().top<=line)found=p; });
+      // above the first section (the hero) light the first item rather than nothing,
+      // so the bar never looks inert on load
+      if(!found)found=pairs[0];
+      // once the page bottom is reached the last section wins, however short it is
+      if(scrollY+innerHeight>=document.documentElement.scrollHeight-4)found=pairs[pairs.length-1];
+      if(found===cur)return;
+      cur=found;
+      pairs.forEach(function(p){
+        var on=p===found;
+        p.a.classList.toggle('active',on);
+        if(on)p.a.setAttribute('aria-current','true'); else p.a.removeAttribute('aria-current');
+      });
+    }
+    addEventListener('scroll',upd,{passive:true});
+    addEventListener('resize',upd,{passive:true});
+    upd();
   })();
 
   // services: tap to flip where there is no hover to do it
