@@ -52,8 +52,6 @@
   .wrap{width:min(100% - 44px,var(--maxw));margin-inline:auto}
   @media(max-width:620px){.wrap{width:min(100% - 32px,var(--maxw))}}
 
-  /* ---------- scroll progress ---------- */
-  .progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--clay);z-index:120}
 
   /* ---------- nav (floating pill) ---------- */
   .nav{position:fixed;top:18px;left:0;right:0;z-index:100;pointer-events:none}

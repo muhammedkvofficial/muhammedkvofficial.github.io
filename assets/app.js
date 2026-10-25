@@ -41,13 +41,6 @@
     });
   })();
 
-  // scroll progress
-  (function(){
-    var bar=document.createElement('div');bar.className='progress';document.body.appendChild(bar);
-    var upd=function(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%';};
-    upd();addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);
-  })();
-
   // bottom nav: mark the section currently in view
   (function(){
     var nav=document.querySelector('.botnav');
