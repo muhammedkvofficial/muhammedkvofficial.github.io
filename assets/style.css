@@ -63,6 +63,13 @@
   .status .dot{width:7px;height:7px;border-radius:50%;background:#2BB673;box-shadow:0 0 0 3px color-mix(in srgb,#2BB673 22%,transparent)}
   @media(prefers-reduced-motion:no-preference){.status .dot{animation:pulse 2.4s var(--ease) infinite}}
   @keyframes pulse{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,#2BB673 22%,transparent)}50%{box-shadow:0 0 0 6px color-mix(in srgb,#2BB673 0%,transparent)}}
+  /* brand sits left of the availability pill and is the way home from every page */
+  .nav-left{display:flex;align-items:center;gap:14px;min-width:0}
+  .nav-brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;
+    font-size:15px;letter-spacing:-.022em;white-space:nowrap;color:var(--ink);transition:opacity .2s;
+    padding-block:11px;margin-block:-11px}
+  .nav-brand:hover{opacity:.66}
+  .nav-brand img{width:26px;height:auto;flex:none}
   .nav-links{display:flex;align-items:center;gap:4px}
   .nav-links a{position:relative;display:inline-flex;align-items:flex-start;gap:3px;padding:8px 13px;border-radius:999px;font-size:14px;color:var(--ink-soft);transition:color .2s,background .2s}
   .nav-links a:hover{color:var(--ink);background:var(--raise-2)}
@@ -74,8 +81,11 @@
   .theme-btn{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink-soft);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:14px;display:grid;place-items:center;transition:background .2s,color .2s}
   .theme-btn:hover{background:var(--raise-2);color:var(--ink)}
   @media(max-width:1180px){.nav-links sup{display:none}.nav-links a{padding:8px 11px}}
-  @media(max-width:940px){.nav-links{display:none}}
-  @media(max-width:560px){.status{font-size:11px;gap:6px}.nav-inner{padding:7px 7px 7px 13px;gap:8px}.nav-cta{padding:9px 14px;font-size:13px}.theme-btn{width:32px;height:32px}}
+  /* the brand outranks the availability text as the viewport narrows: it is the
+     only identity and the only way home, while availability repeats further down */
+  @media(max-width:1180px){.status-txt{display:none}.nav-left{gap:11px}}
+  @media(max-width:940px){.nav-links{display:none}.status{display:none}}
+  @media(max-width:560px){.nav-inner{padding:7px 7px 7px 12px;gap:8px}.nav-cta{padding:9px 14px;font-size:13px}.theme-btn{width:32px;height:32px}.nav-brand{font-size:14px;gap:8px}.nav-brand img{width:23px}}
 
   /* ---------- bottom nav (small screens only) ---------- */
   .botnav{display:none}
@@ -433,3 +443,14 @@
   .work-links{display:flex;align-items:center;gap:clamp(14px,2vw,24px);flex-wrap:wrap}
   .work-link.alt{color:rgba(253,253,253,.62)}
   .work-link.alt:hover{color:var(--sand)}
+
+  /* The MKV mark is black artwork on transparency, so it disappears against a
+     dark header or footer. Inverting turns it white and leaves the alpha alone.
+     Scoped inside the media query, because :not([data-theme="light"]) is also
+     true when no theme attribute is set at all. */
+  :root[data-theme="dark"] .nav-brand img,
+  :root[data-theme="dark"] .logo-img{filter:invert(1)}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]) .nav-brand img,
+    :root:not([data-theme="light"]) .logo-img{filter:invert(1)}
+  }

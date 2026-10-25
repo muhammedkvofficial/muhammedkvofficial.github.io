@@ -115,7 +115,13 @@ const botnav = `<nav class="botnav" aria-label="Sections">
 
 const header = `<header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <span class="status"><span class="dot"></span><span>Available for new projects</span></span>
+    <span class="nav-left">
+      <a class="nav-brand" href="/" aria-label="Muhammed KV, home">
+        <img src="/mkv-logo.png" width="317" height="151" decoding="async" alt="">
+        <span>Muhammed KV</span>
+      </a>
+      <span class="status"><span class="dot"></span><span class="status-txt">Available for new projects</span></span>
+    </span>
     <nav class="nav-links">
 ${navLinks}
     </nav>
