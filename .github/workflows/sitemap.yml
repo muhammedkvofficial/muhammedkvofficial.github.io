@@ -1,18 +1,21 @@
-name: Sitemap lastmod
+name: Build pages and sitemap
 
-# Only fires when the page itself changes. Since the job only ever writes
-# sitemap.xml, its own commit cannot re-trigger this workflow.
+# Fires when the homepage or the case study builder changes. The job only ever
+# writes generated files, and never index.html or the builder, so its own
+# commit cannot re-trigger this workflow.
 on:
   push:
     branches: [main]
-    paths: ['index.html']
+    paths:
+      - 'index.html'
+      - 'scripts/build-cases.mjs'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: sitemap-${{ github.ref }}
+  group: build-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -21,19 +24,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0        # full history, so git log can date index.html
+          fetch-depth: 0        # full history, so git log can date each page
+
+      - name: Rebuild case study pages
+        run: node scripts/build-cases.mjs
 
       - name: Regenerate sitemap.xml
         run: node scripts/sitemap.mjs
 
-      - name: Commit if the date moved
+      - name: Commit anything that changed
         run: |
-          if git diff --quiet -- sitemap.xml; then
-            echo "sitemap already current, nothing to do"
+          if git diff --quiet -- sitemap.xml work; then
+            echo "generated files already current, nothing to do"
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml
-          git commit -m "Update sitemap lastmod [skip ci]"
+          git add sitemap.xml work
+          git commit -m "Rebuild generated pages [skip ci]"
           git push
