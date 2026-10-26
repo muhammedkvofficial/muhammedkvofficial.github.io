@@ -99,7 +99,7 @@ const CASES = [
 
 /* ---------------- shared chrome ---------------- */
 
-const navLinks = `      <a href="/#about">About <sup>(01)</sup></a>
+const navLinks = `      <a href="/#about">About</a>
       <a href="/#work">Work <sup>(12)</sup></a>
       <a href="/#services">Services <sup>(06)</sup></a>
       <a href="/#experience">Experience <sup>(03)</sup></a>
@@ -115,16 +115,13 @@ const botnav = `<nav class="botnav" aria-label="Sections">
 
 const header = `<header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <span class="nav-left">
-      <a class="nav-brand" href="/" aria-label="Muhammed KV, home">
-        <img src="/mkv-logo.png" width="317" height="151" decoding="async" alt="">
-        <span class="nav-brand-txt">
-          <b>Muhammed KV</b>
-          <small>Digital Marketer &amp; Web Developer</small>
-        </span>
-      </a>
-      <span class="status"><span class="dot"></span><span class="status-txt">Available for new projects</span></span>
-    </span>
+    <a class="nav-brand" href="/" aria-label="Muhammed KV, home">
+      <img src="/mkv-logo.png" width="317" height="151" decoding="async" alt="">
+      <span class="nav-brand-txt">
+        <b>Muhammed KV</b>
+        <small>Digital Marketer &amp; Web Developer</small>
+      </span>
+    </a>
     <nav class="nav-links">
 ${navLinks}
     </nav>
@@ -144,6 +141,7 @@ const contact = `  <section id="contact" class="wrap contact">
       <a class="btn ghost" href="https://wa.me/919995609663" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn ghost" href="tel:+919995609663">+91 99956 09663</a>
     </div>
+    <p class="contact-status"><span class="dot"></span>Available for new projects</p>
   </section>`;
 
 const footer = `<footer class="foot">

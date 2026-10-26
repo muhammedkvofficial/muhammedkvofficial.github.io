@@ -41,32 +41,39 @@
     });
   })();
 
-  // bottom nav: mark the section currently in view
+  // nav: mark the section in view, in BOTH navs. Several links can point at the
+  // same section, so the map is keyed by section and every link to it lights up.
   (function(){
-    var nav=document.querySelector('.botnav');
-    if(!nav)return;
-    var links=[].slice.call(nav.querySelectorAll('a'));
-    var pairs=[];
+    var links=[].slice.call(document.querySelectorAll('.botnav a, .nav-links a'));
+    if(!links.length)return;
+    var map=[],byId={};
     links.forEach(function(a){
-      var el=document.getElementById(a.getAttribute('href').slice(1));
-      if(el)pairs.push({a:a,el:el});
+      var href=a.getAttribute('href')||'';
+      var id=href.replace(/^\/?#/,'');
+      if(!id||id===href)return;                 // not an in-page link
+      var el=document.getElementById(id);
+      if(!el)return;                            // section lives on another page
+      if(!byId[id]){byId[id]={el:el,links:[]};map.push(byId[id]);}
+      byId[id].links.push(a);
     });
-    if(!pairs.length)return;
+    // a case study only has #contact, and its Work item is marked active in the
+    // markup: with nothing to track, leave that alone
+    if(map.length<2)return;
+    map.sort(function(x,y){return (x.el.compareDocumentPosition(y.el)&Node.DOCUMENT_POSITION_FOLLOWING)?-1:1;});
     var cur=null;
     function upd(){
       var line=innerHeight*0.34,found=null;
-      pairs.forEach(function(p){ if(p.el.getBoundingClientRect().top<=line)found=p; });
-      // above the first section (the hero) light the first item rather than nothing,
-      // so the bar never looks inert on load
-      if(!found)found=pairs[0];
-      // once the page bottom is reached the last section wins, however short it is
-      if(scrollY+innerHeight>=document.documentElement.scrollHeight-4)found=pairs[pairs.length-1];
+      map.forEach(function(m){ if(m.el.getBoundingClientRect().top<=line)found=m; });
+      if(!found)found=map[0];
+      if(scrollY+innerHeight>=document.documentElement.scrollHeight-4)found=map[map.length-1];
       if(found===cur)return;
       cur=found;
-      pairs.forEach(function(p){
-        var on=p===found;
-        p.a.classList.toggle('active',on);
-        if(on)p.a.setAttribute('aria-current','true'); else p.a.removeAttribute('aria-current');
+      map.forEach(function(m){
+        var on=m===found;
+        m.links.forEach(function(a){
+          a.classList.toggle('active',on);
+          if(on)a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current');
+        });
       });
     }
     addEventListener('scroll',upd,{passive:true});

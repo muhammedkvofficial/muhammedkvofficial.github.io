@@ -64,7 +64,6 @@
   @media(prefers-reduced-motion:no-preference){.status .dot{animation:pulse 2.4s var(--ease) infinite}}
   @keyframes pulse{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,#2BB673 22%,transparent)}50%{box-shadow:0 0 0 6px color-mix(in srgb,#2BB673 0%,transparent)}}
   /* brand sits left of the availability pill and is the way home from every page */
-  .nav-left{display:flex;align-items:center;gap:14px;min-width:0}
   .nav-brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;
     font-size:15px;letter-spacing:-.022em;white-space:nowrap;color:var(--ink);transition:opacity .2s;
     padding-block:11px;margin-block:-11px}
@@ -77,6 +76,8 @@
   .nav-links{display:flex;align-items:center;gap:4px}
   .nav-links a{position:relative;display:inline-flex;align-items:flex-start;gap:3px;padding:8px 13px;border-radius:999px;font-size:14px;color:var(--ink-soft);transition:color .2s,background .2s}
   .nav-links a:hover{color:var(--ink);background:var(--raise-2)}
+  .nav-links a.active{color:var(--ink);background:var(--raise-2)}
+  .nav-links a.active sup{color:var(--clay)}
   .nav-links sup{font-family:var(--mono);font-size:9px;color:var(--faint);letter-spacing:.04em;top:-.1em}
   .nav-cta{position:relative;display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;white-space:nowrap;transition:transform .25s var(--ease),background .25s}
   .nav-cta::after{content:"";position:absolute;inset:-7px;border-radius:999px}
@@ -88,8 +89,7 @@
   @media(max-width:1180px){.nav-links sup{display:none}.nav-links a{padding:8px 11px}}
   /* the brand outranks the availability text as the viewport narrows: it is the
      only identity and the only way home, while availability repeats further down */
-  @media(max-width:1180px){.status-txt{display:none}.nav-left{gap:11px}}
-  @media(max-width:940px){.nav-links{display:none}.status{display:none}}
+  @media(max-width:940px){.nav-links{display:none}}
   @media(max-width:560px){.nav-inner{padding:7px 7px 7px 12px;gap:8px}.nav-cta{padding:7px 12px;font-size:12.5px}.theme-btn{width:32px;height:32px}.nav-brand{font-size:14px;gap:8px}.nav-brand img{width:23px}}
 
   /* ---------- bottom nav (small screens only) ---------- */
@@ -177,8 +177,7 @@
   /* ---------- section frame ---------- */
   section{padding:clamp(66px,9.5vw,132px) 0}
   .sec-head{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-bottom:clamp(34px,4.6vw,62px)}
-  .idx{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay)}
-  .idx::before{content:"";width:26px;height:1px;background:var(--clay)}
+  .idx{display:inline-flex;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay)}
   .sec-head h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,5.2vw,68px);letter-spacing:-.04em;line-height:1.02;margin:15px 0 0;text-wrap:balance}
   .lede{color:var(--muted);font-size:clamp(15px,1.5vw,17px);max-width:48ch;margin:0}
   @media(max-width:840px){.sec-head{grid-template-columns:1fr;align-items:start}}
@@ -345,6 +344,8 @@
   .contact h2 .out{display:block;color:transparent;-webkit-text-stroke:var(--stroke) var(--ink)}
   .contact p{max-width:46ch;margin:clamp(26px,3.4vw,38px) auto 0;color:var(--muted);font-size:clamp(15px,1.6vw,18px)}
   .contact .links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:clamp(28px,3.6vw,40px)}
+  .contact-status{display:inline-flex;align-items:center;gap:9px;margin:clamp(22px,2.6vw,30px) 0 0;
+    font-size:14px;color:var(--muted)}
 
   /* ---------- footer ---------- */
   .foot{border-top:1px solid var(--line);padding:30px 0 40px}
