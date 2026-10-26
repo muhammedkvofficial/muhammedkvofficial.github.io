@@ -471,7 +471,7 @@
   .cv-contact a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-strong)}
   .cv-contact a:hover{text-decoration-color:var(--clay)}
   .cv-intro{font-size:clamp(16px,1.8vw,20px);line-height:1.55;color:var(--ink-soft);margin:clamp(24px,3vw,34px) 0 0;max-width:62ch;letter-spacing:-.008em}
-  .cv-print{margin-top:clamp(22px,2.6vw,30px)}
+  .cv-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:clamp(22px,2.6vw,30px) 0 0}
   .cv-block{margin-top:clamp(38px,5vw,62px)}
   .cv-block h2{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);
     margin:0 0 6px;padding-bottom:12px;border-bottom:1px solid var(--line);font-weight:400}
@@ -497,7 +497,7 @@
   /* Printing is how the PDF gets made, so the page has to come out clean:
      site chrome off, colours forced light, and nothing split across a page. */
   @media print{
-    .nav,.botnav,.foot,.cv-print,.theme-btn{display:none!important}
+    .nav,.botnav,.foot,.cv-actions,.theme-btn{display:none!important}
     :root,:root[data-theme="dark"]{
       --paper:#fff;--raise:#fff;--raise-2:#fff;--ink:#111;--ink-soft:#333;--muted:#555;
       --clay:#7a4a3c;--line:#d8d8d8;--line-strong:#bbb;
@@ -506,17 +506,17 @@
     body{padding-bottom:0!important}
     .cv{padding:0!important;max-width:none}
     .wrap{width:100%}
-    .cv-head h1{font-size:30pt}
-    .cv-role{font-size:12pt}
-    .cv-intro{font-size:10.5pt}
-    .cv-item h3{font-size:12pt}
-    .cv-item p,.cv-tags li{font-size:9.5pt}
+    .cv-head h1{font-size:21pt}
+    .cv-role{font-size:10.5pt}
+    .cv-intro{font-size:9pt;margin-top:10pt}
+    .cv-item h3{font-size:10.5pt}
+    .cv-item p,.cv-tags li{font-size:8.5pt}
     .cv-contact{font-size:9pt}
-    .cv-block{margin-top:20pt;break-inside:auto}
+    .cv-block{margin-top:13pt;break-inside:auto}
     .cv-block h2{font-size:8.5pt}
-    .cv-item{break-inside:avoid;page-break-inside:avoid;padding:9pt 0}
+    .cv-item{break-inside:avoid;page-break-inside:avoid;padding:6pt 0}
     .cv-head{break-after:avoid;page-break-after:avoid}
     .cv-links a{color:#7a4a3c!important}
     a{text-decoration:none!important}
-    @page{margin:14mm 14mm 12mm}
+    @page{margin:12mm 12mm 10mm}
   }

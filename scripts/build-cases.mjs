@@ -103,7 +103,8 @@ const navLinks = `      <a href="/#about">About</a>
       <a href="/#work">Work <sup>(12)</sup></a>
       <a href="/#services">Services <sup>(06)</sup></a>
       <a href="/#experience">Experience <sup>(03)</sup></a>
-      <a href="/#faq">FAQ <sup>(07)</sup></a>`;
+      <a href="/#faq">FAQ <sup>(07)</sup></a>
+      <a href="/resume/">Resume</a>`;
 
 const botnav = `<nav class="botnav" aria-label="Sections">
   <a href="/#about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></svg><span>About</span></a>

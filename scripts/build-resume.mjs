@@ -155,7 +155,10 @@ ${header}
 
     <p class="cv-intro">I handle both halves of an online presence: the website that gets built, and the marketing that gets it found. Most businesses buy those separately and pay for it later, because a site built without search in mind is expensive to fix, and ads pointed at a slow page waste budget.</p>
 
-    <a class="btn primary cv-print" href="#" onclick="window.print();return false;">Save as PDF <span class="arw">↓</span></a>
+    <p class="cv-actions">
+      <a class="btn primary" href="/muhammed-kv-resume.pdf" download>Download PDF <span class="arw">↓</span></a>
+      <a class="btn ghost" href="#" onclick="window.print();return false;">Print this page</a>
+    </p>
 
     <section class="cv-block">
       <h2>Selected work</h2>
