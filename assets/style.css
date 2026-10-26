@@ -511,7 +511,8 @@
     .cv-intro{font-size:9pt;margin-top:10pt}
     .cv-item h3{font-size:10.5pt}
     .cv-item p,.cv-tags li{font-size:8.5pt}
-    .cv-contact{font-size:9pt}
+    .cv-contact{font-size:8.5pt;display:flex;flex-wrap:wrap;gap:1pt 8pt;justify-content:flex-end;max-width:62%}
+    .cv-contact li:not(:last-child)::after{content:" ·";color:#999}
     .cv-block{margin-top:13pt;break-inside:auto}
     .cv-block h2{font-size:8.5pt}
     .cv-item{break-inside:avoid;page-break-inside:avoid;padding:6pt 0}

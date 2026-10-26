@@ -149,6 +149,8 @@ ${header}
         <li><a href="mailto:muhammedkvofficial@gmail.com">muhammedkvofficial@gmail.com</a></li>
         <li><a href="tel:+919995609663">+91 99956 09663</a></li>
         <li><a href="https://www.linkedin.com/in/muhammedkv-marketing/" target="_blank" rel="noopener">linkedin.com/in/muhammedkv-marketing</a></li>
+        <li><a href="https://github.com/muhammedkvofficial" target="_blank" rel="noopener">github.com/muhammedkvofficial</a></li>
+        <li><a href="https://www.instagram.com/muhammedkv0" target="_blank" rel="noopener">instagram.com/muhammedkv0</a></li>
         <li>Calicut, Kerala, India</li>
       </ul>
     </header>
