@@ -140,7 +140,7 @@
     :root:not([data-theme="light"]) .hero-face{mix-blend-mode:normal;background:#FDFDFD;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
   }
   .hero-role{display:block;margin-top:clamp(18px,2.4vw,30px);font-family:var(--body);font-weight:400;
-    font-size:clamp(15px,1.85vw,23px);line-height:1.35;letter-spacing:-.01em;text-transform:none;color:var(--clay);max-width:22ch}
+    font-size:clamp(15px,1.85vw,23px);line-height:1.35;letter-spacing:-.01em;text-transform:none;color:var(--muted);max-width:22ch}
   .hero-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:34px;flex-wrap:wrap;
     margin-top:clamp(36px,5.4vw,70px);padding-top:clamp(24px,3vw,34px);border-top:1px solid var(--line)}
   .hero-blurb{max-width:46ch}
