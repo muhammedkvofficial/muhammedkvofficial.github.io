@@ -149,6 +149,7 @@ const footer = `<footer class="foot">
     <a href="/" class="brand"><img class="logo-img" src="/mkv-logo.png" width="317" height="151" decoding="async" alt="Muhammed KV logo">Muhammed KV</a>
     <nav>
       <a href="/#about">About</a><a href="/#work">Work</a><a href="/#services">Services</a><a href="/#faq">FAQ</a>
+      <a href="/resume/">Resume</a>
       <a href="https://www.linkedin.com/in/muhammedkv-marketing/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://www.instagram.com/muhammedkv0" target="_blank" rel="noopener">Instagram</a>
     </nav>
@@ -330,4 +331,4 @@ for (const [i, c] of CASES.entries()) {
 }
 console.log(`${n} case study pages written`);
 
-export { CASES };
+export { CASES, header, botnav, footer, contact };

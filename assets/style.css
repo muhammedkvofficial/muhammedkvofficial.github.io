@@ -460,3 +460,63 @@
     :root:not([data-theme="light"]) .nav-brand img,
     :root:not([data-theme="light"]) .logo-img{filter:invert(1)}
   }
+
+  /* ---------- resume ---------- */
+  .cv{padding:clamp(118px,15vw,170px) 0 clamp(50px,7vw,90px);max-width:860px}
+  .cv-head{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;
+    padding-bottom:clamp(22px,2.8vw,30px);border-bottom:1px solid var(--line)}
+  .cv-head h1{font-family:var(--display);font-weight:900;font-size:clamp(34px,6vw,62px);letter-spacing:-.045em;line-height:1;margin:0}
+  .cv-role{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2vw,23px);color:var(--clay);margin:10px 0 0}
+  .cv-contact{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:13.5px;color:var(--muted);text-align:right}
+  .cv-contact a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line-strong)}
+  .cv-contact a:hover{text-decoration-color:var(--clay)}
+  .cv-intro{font-size:clamp(16px,1.8vw,20px);line-height:1.55;color:var(--ink-soft);margin:clamp(24px,3vw,34px) 0 0;max-width:62ch;letter-spacing:-.008em}
+  .cv-print{margin-top:clamp(22px,2.6vw,30px)}
+  .cv-block{margin-top:clamp(38px,5vw,62px)}
+  .cv-block h2{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);
+    margin:0 0 6px;padding-bottom:12px;border-bottom:1px solid var(--line);font-weight:400}
+  .cv-item{padding:clamp(16px,2.2vw,22px) 0;border-bottom:1px solid var(--line)}
+  .cv-item:last-child{border-bottom:none}
+  .cv-item-head{display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap}
+  .cv-item h3{font-family:var(--display);font-weight:700;font-size:clamp(17px,2.1vw,23px);letter-spacing:-.025em;margin:0}
+  .cv-kind{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .cv-item p{margin:9px 0 0;font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.6;color:var(--ink-soft);max-width:68ch}
+  .cv-links{display:flex;gap:16px;flex-wrap:wrap}
+  .cv-links a{font-size:14px;font-weight:600;color:var(--clay)}
+  .cv-links a:hover{text-decoration:underline;text-underline-offset:3px}
+  .cv-tags{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0}
+  .cv-tags li{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;color:var(--ink-soft)}
+  .cv-foot-note{margin:clamp(34px,4vw,48px) 0 0;font-size:14px;color:var(--muted)}
+  .cv-foot-note a{color:var(--clay);text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:620px){
+    .cv{padding:104px 0 40px}
+    .cv-contact{text-align:left}
+    .cv-block{margin-top:34px}
+  }
+
+  /* Printing is how the PDF gets made, so the page has to come out clean:
+     site chrome off, colours forced light, and nothing split across a page. */
+  @media print{
+    .nav,.botnav,.foot,.cv-print,.theme-btn{display:none!important}
+    :root,:root[data-theme="dark"]{
+      --paper:#fff;--raise:#fff;--raise-2:#fff;--ink:#111;--ink-soft:#333;--muted:#555;
+      --clay:#7a4a3c;--line:#d8d8d8;--line-strong:#bbb;
+    }
+    html,body{background:#fff!important;color:#111!important}
+    body{padding-bottom:0!important}
+    .cv{padding:0!important;max-width:none}
+    .wrap{width:100%}
+    .cv-head h1{font-size:30pt}
+    .cv-role{font-size:12pt}
+    .cv-intro{font-size:10.5pt}
+    .cv-item h3{font-size:12pt}
+    .cv-item p,.cv-tags li{font-size:9.5pt}
+    .cv-contact{font-size:9pt}
+    .cv-block{margin-top:20pt;break-inside:auto}
+    .cv-block h2{font-size:8.5pt}
+    .cv-item{break-inside:avoid;page-break-inside:avoid;padding:9pt 0}
+    .cv-head{break-after:avoid;page-break-after:avoid}
+    .cv-links a{color:#7a4a3c!important}
+    a{text-decoration:none!important}
+    @page{margin:14mm 14mm 12mm}
+  }
