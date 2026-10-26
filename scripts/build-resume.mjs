@@ -37,7 +37,7 @@ const WORK = [
     link: '@nadancamp_',
     href: 'https://www.instagram.com/nadancamp_/',
     case: '/work/nadan-camp/',
-    body: 'Started a Kerala travel community’s Instagram from zero and grew it past 1,700 followers. Run the page and the Meta reel campaigns behind it, with trip creatives carrying a direct booking call to action.',
+    body: 'Started a Kerala travel community’s Instagram from zero and grew it past 2,000 followers. Run the page and the Meta reel campaigns behind it, with trip creatives carrying a direct booking call to action.',
   },
   {
     name: 'Seven live storefronts',

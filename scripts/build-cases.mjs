@@ -72,8 +72,8 @@ const CASES = [
     kicker: 'Social Media · Meta Ads · Growth',
     title: 'Nadan Camp Case Study: An Instagram Grown From Zero',
     description:
-      'Starting a Kerala travel community’s Instagram from an empty account and growing it past 1,700 followers, with Meta reel campaigns behind the content.',
-    lede: 'A travel community’s Instagram, started at zero and grown past 1,700.',
+      'Starting a Kerala travel community’s Instagram from an empty account and growing it past 2,000 followers, with Meta reel campaigns behind the content.',
+    lede: 'A travel community’s Instagram, started at zero and grown past 2,000.',
     role: 'Account build, content, paid social',
     scope: 'Content planning, reels, Meta ad campaigns, daily handling',
     liveLabel: '@nadancamp_',
@@ -93,7 +93,7 @@ const CASES = [
       ['Ongoing handling', 'Planning, posting and running the campaigns as a continuing job.'],
     ],
     outcome:
-      'From an empty account to past 1,700 followers, with a content and paid system running behind it: reels prove the trips are real, and campaign posts turn that into booking conversations.',
+      'From an empty account to past 2,000 followers, with a content and paid system running behind it: reels prove the trips are real, and campaign posts turn that into booking conversations.',
   },
 ];
 
