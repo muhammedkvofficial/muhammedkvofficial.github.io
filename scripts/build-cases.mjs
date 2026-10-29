@@ -97,6 +97,12 @@ const CASES = [
   },
 ];
 
+/* Images ship as AVIF with the JPEG kept as a fallback; build-images.mjs
+   generates the AVIF beside each JPEG. The <img> is untouched, so a browser
+   without AVIF support loses nothing. */
+const picture = (src, w, h, alt, extra) =>
+  `<picture><source srcset="${src.replace(/\.jpg$/, ".avif")}" type="image/avif"><img src="${src}" width="${w}" height="${h}" ${extra} decoding="async" alt="${alt}"></picture>`;
+
 /* ---------------- shared chrome ---------------- */
 
 const navLinks = `      <a href="/#about">About</a>
@@ -208,7 +214,7 @@ function page(c, i) {
   const second = c.second
     ? `
     <figure class="case-aside wrap reveal">
-      <img src="${c.second.src}" width="${c.second.w}" height="${c.second.h}" loading="lazy" decoding="async" alt="${c.second.alt}">
+      ${picture(c.second.src, c.second.w, c.second.h, c.second.alt, 'loading="lazy"')}
       <figcaption>${c.secondCap}</figcaption>
     </figure>`
     : '';
@@ -275,7 +281,7 @@ ${header}
   </section>
 
   <figure class="case-shot wrap reveal">
-    <img src="${c.shot.src}" width="${c.shot.w}" height="${c.shot.h}" fetchpriority="high" decoding="async" alt="${c.shot.alt}">
+    ${picture(c.shot.src, c.shot.w, c.shot.h, c.shot.alt, 'fetchpriority="high"')}
   </figure>
 
   <section class="wrap case-body">
