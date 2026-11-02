@@ -1,0 +1,37 @@
+# Muhammed KV
+
+> Digital marketer and web developer based in Calicut, Kerala, India. Works across both search and paid advertising as well as building the websites those campaigns point at: SEO, Meta Ads, Google Ads, e-commerce development and brand design.
+
+Independent practitioner, currently at Hello Aura. Serves clients in Kerala and across India, plus e-commerce brands in the UAE and Saudi Arabia. Contact: muhammedkvofficial@gmail.com, +91 99956 09663.
+
+## Services
+
+- Search engine optimisation: technical audits, on-page optimisation, content strategy, local search
+- Paid advertising: Meta Ads and Google Ads, set up with conversion tracking before launch
+- E-commerce development: Shopify and custom storefronts
+- Web development: responsive sites in HTML, CSS, JavaScript and React
+- Branding and graphic design: logomarks, wordmarks, social and campaign creative
+
+## Selected work
+
+- [Zedutoys case study](https://www.muhammedkv.com/work/zedutoys/): brand identity and store design for an educational toys retailer, built around age-based browsing so parents shop by what a toy develops rather than by product type
+- [Royal Trading Academy case study](https://www.muhammedkv.com/work/royal-trading-academy/): Instagram design and day-to-day page handling for a UAE forex institute, across a 23.5K-follower audience
+- [Nadan Camp case study](https://www.muhammedkv.com/work/nadan-camp/): a Kerala travel community's Instagram started from an empty account and grown past 2,000 followers, with the Meta reel campaigns behind it
+- Seven live storefronts: Desert Essence and Joker Perfumes (UAE), ZEN (Saudi Arabia), DR.IN, COLE, Elegant Bayt and Sterling. UI/UX, banner design and product design on each.
+
+## Background
+
+- B.Sc. Chemistry, University of Calicut
+- Digital marketing training at Fragmtree Campus, Calicut
+
+## Pages
+
+- [Home](https://www.muhammedkv.com/): services, work, experience and frequently asked questions
+- [Resume](https://www.muhammedkv.com/resume/): full background, also available as a one-page PDF
+- [Sitemap](https://www.muhammedkv.com/sitemap.xml)
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/muhammedkv-marketing/)
+- [GitHub](https://github.com/muhammedkvofficial)
+- [Instagram](https://www.instagram.com/muhammedkv0)
