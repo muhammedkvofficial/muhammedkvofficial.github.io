@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CASES, header, botnav, footer, contact } from './build-cases.mjs';
+import { CASES, SERVICE_LINKS, header, botnav, footer, contact } from './build-cases.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://www.muhammedkv.com';
@@ -119,6 +119,14 @@ const SERVICES = [
     cases: ['royal-trading-academy', 'nadan-camp'],
   },
 ];
+
+// slug, name, kicker and lede come from SERVICE_LINKS so the cards rendered on
+// the case pages and the pages themselves cannot describe a service differently.
+for (const s of SERVICES) {
+  const shared = SERVICE_LINKS.find((x) => x.slug === s.slug);
+  if (!shared) throw new Error('no SERVICE_LINKS entry for ' + s.slug);
+  Object.assign(s, { name: shared.name, kicker: shared.kicker, lede: shared.lede });
+}
 
 function page(s) {
   const url = `${SITE}/services/${s.slug}/`;

@@ -11,6 +11,7 @@ const SITE = 'https://www.muhammedkv.com';
 const CASES = [
   {
     slug: 'zedutoys',
+    services: ['web-development-calicut', 'seo-calicut'],
     name: 'Zedutoys',
     kicker: 'E-commerce · Branding · Web',
     title: 'Zedutoys Case Study: Educational Toys E-commerce Store',
@@ -40,6 +41,7 @@ const CASES = [
   },
   {
     slug: 'royal-trading-academy',
+    services: ['google-meta-ads-calicut'],
     name: 'Royal Trading Academy',
     kicker: 'Social Media · Graphic Design · Branding',
     title: 'Royal Trading Academy Case Study: Instagram Design & Handling',
@@ -68,6 +70,7 @@ const CASES = [
   },
   {
     slug: 'nadan-camp',
+    services: ['google-meta-ads-calicut'],
     name: 'Nadan Camp',
     kicker: 'Social Media · Meta Ads · Growth',
     title: 'Nadan Camp Case Study: An Instagram Grown From Zero',
@@ -102,6 +105,29 @@ const CASES = [
    without AVIF support loses nothing. */
 const picture = (src, w, h, alt, extra) =>
   `<picture><source srcset="${src.replace(/\.jpg$/, ".avif")}" type="image/avif"><img src="${src}" width="${w}" height="${h}" ${extra} decoding="async" alt="${alt}"></picture>`;
+
+/* Shared with build-services.mjs, which imports this and merges its own
+   copy for each page. One source for the fields both files render. */
+const SERVICE_LINKS = [
+  {
+    slug: 'seo-calicut',
+    name: 'SEO Services in Calicut',
+    kicker: 'Search Engine Optimisation',
+    lede: 'Getting found by people already looking for what you sell, without paying for every click.',
+  },
+  {
+    slug: 'web-development-calicut',
+    name: 'Web Development in Calicut',
+    kicker: 'Websites and E-commerce',
+    lede: 'Sites built to be found, not just to look right in a design file.',
+  },
+  {
+    slug: 'google-meta-ads-calicut',
+    name: 'Google Ads & Meta Ads in Calicut',
+    kicker: 'Paid Advertising',
+    lede: 'Campaigns measured against what they earned, not what they reached.',
+  },
+];
 
 /* ---------------- shared chrome ---------------- */
 
@@ -313,6 +339,12 @@ ${others.map((o) => `      <a class="case-next-card reveal" href="/work/${o.slug
         <p>${o.lede}</p>
         <span class="case-next-go">Read the case study <span aria-hidden="true">↗</span></span>
       </a>`).join('\n')}
+${SERVICE_LINKS.filter((s) => c.services.includes(s.slug)).map((s) => `      <a class="case-next-card reveal" href="/services/${s.slug}/">
+        <span class="k">${s.kicker}</span>
+        <h3>${s.name}</h3>
+        <p>${s.lede}</p>
+        <span class="case-next-go">See the service <span aria-hidden="true">↗</span></span>
+      </a>`).join('\n')}
     </div>
   </section>
 
@@ -338,4 +370,4 @@ for (const [i, c] of CASES.entries()) {
 }
 console.log(`${n} case study pages written`);
 
-export { CASES, header, botnav, footer, contact };
+export { CASES, SERVICE_LINKS, header, botnav, footer, contact };
