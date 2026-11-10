@@ -12,12 +12,17 @@ const SITE = 'https://www.muhammedkv.com';
 // Case study pages are generated, so their content really lives in the builder
 // and its data. Date them from whichever of the two changed most recently.
 const CASE_SLUGS = ['zedutoys', 'royal-trading-academy', 'nadan-camp'];
+const SERVICE_SLUGS = ['seo-calicut', 'web-development-calicut', 'google-meta-ads-calicut'];
 const PAGES = [
   { loc: `${SITE}/`, sources: ['index.html'] },
   { loc: `${SITE}/resume/`, sources: ['resume/index.html', 'scripts/build-resume.mjs'] },
   ...CASE_SLUGS.map((s) => ({
     loc: `${SITE}/work/${s}/`,
     sources: [`work/${s}/index.html`, 'scripts/build-cases.mjs'],
+  })),
+  ...SERVICE_SLUGS.map((s) => ({
+    loc: `${SITE}/services/${s}/`,
+    sources: [`services/${s}/index.html`, 'scripts/build-services.mjs'],
   })),
 ];
 
