@@ -6,18 +6,97 @@ Independent practitioner, currently at Hello Aura. Serves clients in Kerala and 
 
 ## Services
 
-- Search engine optimisation: technical audits, on-page optimisation, content strategy, local search
-- Paid advertising: Meta Ads and Google Ads, set up with conversion tracking before launch
-- E-commerce development: Shopify and custom storefronts
-- Web development: responsive sites in HTML, CSS, JavaScript and React
-- Branding and graphic design: logomarks, wordmarks, social and campaign creative
+- [SEO Services in Calicut](https://www.muhammedkv.com/services/seo-calicut/): SEO for businesses in Calicut and across Kerala: technical audits, on-page work, local search and content built around what customers actually search.
+- [Web Development in Calicut](https://www.muhammedkv.com/services/web-development-calicut/): Websites and e-commerce stores built in Calicut, Kerala: fast, mobile-first and structured for search from the first line rather than retrofitted later.
+- [Google Ads & Meta Ads in Calicut](https://www.muhammedkv.com/services/google-meta-ads-calicut/): Meta and Google Ads managed for businesses in Calicut and Kerala: conversion tracking set up first, then campaigns judged on returns rather than reach.
+
+Also: social media management, content and SEO copywriting, branding and graphic design.
 
 ## Selected work
 
-- [Zedutoys case study](https://www.muhammedkv.com/work/zedutoys/): brand identity and store design for an educational toys retailer, built around age-based browsing so parents shop by what a toy develops rather than by product type
-- [Royal Trading Academy case study](https://www.muhammedkv.com/work/royal-trading-academy/): Instagram design and day-to-day page handling for a UAE forex institute, across a 23.5K-follower audience
-- [Nadan Camp case study](https://www.muhammedkv.com/work/nadan-camp/): a Kerala travel community's Instagram started from an empty account and grown past 2,000 followers, with the Meta reel campaigns behind it
+- [Zedutoys case study](https://www.muhammedkv.com/work/zedutoys/): How the Zedutoys online store was designed and built around how children learn: brand identity, a developmental collections system and age-based browsing.
+- [Royal Trading Academy case study](https://www.muhammedkv.com/work/royal-trading-academy/): Designing one visual system for a UAE forex academy’s Instagram and handling the page day to day, across a 23.5K-follower audience.
+- [Nadan Camp case study](https://www.muhammedkv.com/work/nadan-camp/): Starting a Kerala travel community’s Instagram from an empty account and growing it past 2,000 followers, with Meta reel campaigns behind the content.
 - Seven live storefronts: Desert Essence and Joker Perfumes (UAE), ZEN (Saudi Arabia), DR.IN, COLE, Elegant Bayt and Sterling. UI/UX, banner design and product design on each.
+- Brand marks: logomarks and wordmarks for Zedutoys, Elegant Bayt, Merkatyo, ZEN and sui menu.
+
+## Questions and answers
+
+### What does Muhammed KV do as a digital marketer and web developer?
+
+I cover both sides of an online presence. On the development side I build fast, mobile-first websites and e-commerce stores on clean, SEO-ready structure. On the marketing side I run SEO, Meta Ads, Google Ads, social media handling and content. The site that gets built also gets found.
+
+### Where are you based, and do you work with clients outside Calicut?
+
+I'm based in Calicut (Kozhikode), Kerala, and I work with businesses across Kerala and the rest of India. Design reviews, campaign changes and reporting all happen online, so distance isn't a limitation. I work remotely as readily as locally.
+
+### Do you handle the website and the marketing together?
+
+Yes, and that's usually the point. A site built without search in mind is expensive to fix later, and ads pointed at a slow page waste budget. Building the site and running the campaigns together means the structure, the copy and the landing pages line up from day one.
+
+### What kind of projects have you worked on?
+
+Three stand out. Zedutoys is an educational-toys e-commerce site where I contributed to the design and development and applied branding throughout. Royal Trading Academy is a UAE forex institute whose Instagram posts I design and whose page I handle day to day. Nadan Camp is a Kerala travel community whose Instagram I started from zero and now run, ads included. Alongside those I've done the UI/UX, banner design and product design for seven live e-commerce storefronts across the UAE, Saudi Arabia and India. I'm currently at Hello Aura, working across web design, graphic design, branding and digital marketing for client businesses.
+
+### How do you measure marketing results?
+
+Tracking gets set up before a campaign runs: conversions, form fills, purchases, whichever action actually matters to the business. Reporting is tied to those numbers rather than reach or impressions alone, so you can see what the spend returned.
+
+### What's your background?
+
+A B.Sc. in Chemistry from the University of Calicut, plus digital marketing training at Fragmtree Campus, Calicut. The science background is where the analytical half comes from. I treat campaigns as tests with measurable outcomes rather than guesses.
+
+### How long does a website take to build?
+
+It depends on scope. A focused landing page is quick; an e-commerce store with a catalogue, payments and content takes longer. I'll give you a realistic timeline once we've talked through what the site actually needs to do.
+
+### How long does SEO take to show results?
+
+Technical and on-page fixes can show within four to eight weeks. Content and authority building take three to six months before the trend is clear. Anyone quoting faster than that is either targeting keywords nobody searches or not telling you the whole picture.
+
+### Do you work with businesses outside Calicut?
+
+Yes. I am based in Calicut (Kozhikode) and work with businesses across Kerala and the rest of India, plus e-commerce brands in the UAE and Saudi Arabia. Audits, reporting and review calls all happen online, so location is not a constraint.
+
+### Can you guarantee a number one ranking?
+
+No, and neither can anyone else honestly. Google weighs hundreds of signals and nobody controls them. What I can commit to is the work being measurable: tracking set up first, so you can see what changed and judge it yourself.
+
+### Is SEO worth it if I am already running ads?
+
+Usually yes, because they do different jobs. Ads stop the moment you stop paying; search traffic keeps arriving. Running both also tells you which keywords convert before you commit to ranking for them.
+
+### How long does a website take to build?
+
+It depends on scope. A focused landing page is quick; an e-commerce store with a catalogue, payments and content takes longer. I will give you a realistic timeline once we have talked through what the site actually needs to do.
+
+### Do you build on Shopify or custom?
+
+Both. Shopify makes sense when you want to run the store yourself without a developer in the loop. Custom makes sense when the catalogue or the checkout does something Shopify fights you on. I will tell you which fits rather than defaulting to whichever is easier for me.
+
+### Will the site work properly on phones?
+
+Yes, and that is where it gets designed first. Most traffic in Kerala arrives on a phone, often on a slow connection, so layouts are tested at phone width and images are served in modern formats to keep pages light.
+
+### Can you redesign a site I already have?
+
+Yes. That usually starts with an audit, because it is worth knowing which pages currently earn traffic before anything is changed. Redesigns that ignore that are the most common way a business loses rankings overnight.
+
+### What budget do I need to start?
+
+Enough for the platform to leave the learning phase, which depends on your product and how often people buy it. A thin budget spread over many campaigns learns nothing and spends anyway, so it is usually better to start narrow.
+
+### Meta Ads or Google Ads: which should I run?
+
+Google captures people already searching for what you sell, so it suits established demand. Meta creates demand among people who were not looking yet, so it suits new products and visual categories. Which fits depends on whether people already know they want this.
+
+### How do you measure whether ads worked?
+
+Tracking gets set up before a campaign runs: conversions, form fills, purchases, whichever action actually matters to the business. Reporting is tied to those numbers rather than reach or impressions alone, so you can see what the spend returned.
+
+### Do you design the ad creative as well?
+
+Yes. Creative and campaign management are the same job here, which is how the creative ends up matching the brand rather than looking like it came from somewhere else.
 
 ## Background
 
