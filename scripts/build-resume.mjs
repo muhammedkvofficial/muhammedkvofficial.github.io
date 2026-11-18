@@ -159,6 +159,7 @@ ${header}
 
     <p class="cv-actions">
       <a class="btn primary" href="/muhammed-kv-resume.pdf" download>Download PDF <span class="arw">↓</span></a>
+      <a class="btn ghost" href="/cv/">Full CV</a>
       <a class="btn ghost" href="#" onclick="window.print();return false;">Print this page</a>
     </p>
 

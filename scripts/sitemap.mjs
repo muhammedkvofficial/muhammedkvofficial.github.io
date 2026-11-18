@@ -16,6 +16,7 @@ const SERVICE_SLUGS = ['seo-calicut', 'web-development-calicut', 'google-meta-ad
 const PAGES = [
   { loc: `${SITE}/`, sources: ['index.html'] },
   { loc: `${SITE}/resume/`, sources: ['resume/index.html', 'scripts/build-resume.mjs'] },
+  { loc: `${SITE}/cv/`, sources: ['cv/index.html', 'scripts/build-cv.mjs'] },
   ...CASE_SLUGS.map((s) => ({
     loc: `${SITE}/work/${s}/`,
     sources: [`work/${s}/index.html`, 'scripts/build-cases.mjs'],
