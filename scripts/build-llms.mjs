@@ -63,7 +63,7 @@ ${qa.map(([q, a]) => `### ${q}\n\n${a}`).join('\n\n')}
 
 - [Home](${SITE}/): services, work, experience and frequently asked questions
 - [Resume](${SITE}/resume/): full background, also available as a one-page PDF
-- [Curriculum vitae](${SITE}/cv/): the long form, with education dates, achievements and full work history; PDF download
+- [Curriculum vitae (PDF)](${SITE}/muhammed-kv-cv.pdf): the long form, with education dates, achievements and full work history
 - [Sitemap](${SITE}/sitemap.xml)
 
 ## Profiles
